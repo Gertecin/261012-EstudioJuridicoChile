@@ -1,0 +1,29 @@
+# macOS
+.DS_Store
+.AppleDoubleIcon
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Entornos
+.env
+.env.local
+node_modules/
+
+# Copias de seguridad
+*.bak
+*.backup
