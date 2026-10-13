@@ -1,29 +1,8 @@
-# macOS
+node_modules
+dist
 .DS_Store
-.AppleDoubleIcon
-
-# Windows
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-
-# Editores
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# Logs (si más adelante agregas un backend)
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Entornos
+*.local
 .env
 .env.local
-node_modules/
-
-# Copias de seguridad
-*.bak
-*.backup
+.vscode
+.idea
