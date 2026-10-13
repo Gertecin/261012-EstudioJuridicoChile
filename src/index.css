@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', Inter, system-ui, sans-serif;
+  color: #0F172A;
+  background: #F8FAFC;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: #1E293B;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+/* Focus visible accesible */
+:focus-visible {
+  outline: 3px solid #C5A880;
+  outline-offset: 2px;
+}
+
+/* Acordeón animación */
+.faq-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 320ms ease;
+}
+
+/* Evitar desbordes */
+html, body { max-width: 100%; }
+img, svg, video { height: auto; max-width: 100%; }
