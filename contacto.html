@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Contacto | Estudio de Abogadas de Familia Viña del Mar</title>
+  <meta name="description" content="Agenda una consulta con nuestro estudio de abogadas de familia en Viña del Mar. Formulario, teléfono y dirección. Atención presencial y remota." />
+  <meta name="theme-color" content="#1E293B" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand"><span class="brand-mark" aria-hidden="true">M</span><span>Montenegro &amp; Asociadas<small>Abogadas de Familia</small></span></a>
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="sobre-nosotras.html">Sobre nosotras</a>
+        <a href="areas.html">Áreas de práctica</a>
+        <a href="preguntas-frecuentes.html">Preguntas frecuentes</a>
+        <a href="contacto.html" aria-current="page">Contacto</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu"><span></span></button>
+    </div>
+    <nav id="mobile-menu" class="mobile-menu" aria-label="Navegación móvil">
+      <a href="index.html">Inicio</a>
+      <a href="sobre-nosotras.html">Sobre nosotras</a>
+      <a href="areas.html">Áreas de práctica</a>
+      <a href="preguntas-frecuentes.html">Preguntas frecuentes</a>
+      <a href="contacto.html" aria-current="page">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <span class="eyebrow">Contacto</span>
+        <h1>Cuéntanos tu situación y te respondemos pronto.</h1>
+        <p class="lead">Completa el formulario con los datos básicos de tu consulta. Todas las comunicaciones están protegidas por el secreto profesional.</p>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="split">
+          <div class="form-wrap">
+            <h2 style="font-size:1.4rem;">Enviar una consulta</h2>
+            <form id="contact-form" novalidate>
+              <div class="form-row two">
+                <div>
+                  <label for="nombre">Nombre completo *</label>
+                  <input type="text" id="nombre" name="nombre" required autocomplete="name" />
+                </div>
+                <div>
+                  <label for="telefono">Teléfono</label>
+                  <input type="tel" id="telefono" name="telefono" autocomplete="tel" placeholder="+56 9 0000 0000" />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div>
+                  <label for="email">Correo electrónico *</label>
+                  <input type="email" id="email" name="email" required autocomplete="email" />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div>
+                  <label for="area">Materia de consulta</label>
+                  <select id="area" name="area">
+                    <option value="">Selecciona un área</option>
+                    <option>Divorcio o separación</option>
+                    <option>Cuidado personal o visitas</option>
+                    <option>Pensión de alimentos</option>
+                    <option>Adopción o filiación</option>
+                    <option>Mediación familiar</option>
+                    <option>Violencia intrafamiliar</option>
+                    <option>Otra</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div>
+                  <label for="mensaje">Cuéntanos brevemente tu consulta *</label>
+                  <textarea id="mensaje" name="mensaje" required placeholder="Ej.: Estoy evaluando un divorcio de mutuo acuerdo y tenemos dos hijos menores..."></textarea>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <label class="checkbox">
+                  <input type="checkbox" id="privacidad" name="privacidad" required />
+                  <span>He leído y acepto la <a href="#privacidad">política de privacidad</a> y el tratamiento confidencial de mis antecedentes. *</span>
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width:100%;">Enviar consulta</button>
+
+              <div id="form-feedback" class="form-feedback" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+
+          <div>
+            <div class="contact-info">
+              <h2 style="font-size:1.4rem;">Información de contacto</h2>
+              <div class="item">
+                <div class="icon" aria-hidden="true">✉</div>
+                <div>
+                  <strong>Correo</strong>
+                  <span>contacto@ejemplo.cl</span>
+                </div>
+              </div>
+              <div class="item">
+                <div class="icon" aria-hidden="true">☎</div>
+                <div>
+                  <strong>Teléfono</strong>
+                  <span>+56 32 200 0000</span>
+                </div>
+              </div>
+              <div class="item">
+                <div class="icon" aria-hidden="true">⌂</div>
+                <div>
+                  <strong>Oficina</strong>
+                  <span>Av. Libertad 1234, Oficina 801<br>Viña del Mar</span>
+                </div>
+              </div>
+              <div class="item">
+                <div class="icon" aria-hidden="true">◷</div>
+                <div>
+                  <strong>Horario</strong>
+                  <span>Lunes a viernes, 09:00 a 18:30 hrs.<br>Atención remota disponible.</span>
+                </div>
+              </div>
+            </div>
+
+            <div id="privacidad" class="card" style="margin-top:1.5rem;">
+              <h3 style="font-size:1.1rem;">Política de privacidad (marcador)</h3>
+              <p style="font-size:.92rem; color: var(--gris-pizarra);">
+                [TEXTO MARCADOR — A REEMPLAZAR POR EL TEXTO DEFINITIVO REVISADO POR EL ESTUDIO.]
+                Los datos personales proporcionados serán tratados por Montenegro &amp; Asociadas con la finalidad de responder a su consulta y, en su caso, prestar los servicios jurídicos contratados.
+                Sus antecedentes no serán compartidos con terceros salvo obligación legal. Puede ejercer sus derechos de acceso, rectificación, cancelación y oposición escribiendo a contacto@ejemplo.cl,
+                conforme a la Ley N° 19.628 sobre Protección de la Vida Privada.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><h4>Montenegro &amp; Asociadas</h4><p style="color:rgba(255,255,255,.7); font-size:.95rem;">Estudio jurídico de familia en Viña del Mar.</p></div>
+      <div>
+        <h4>Navegación</h4>
+        <p><a href="sobre-nosotras.html">Sobre nosotras</a></p>
+        <p><a href="areas.html">Áreas de práctica</a></p>
+        <p><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></p>
+        <p><a href="contacto.html">Contacto</a></p>
+      </div>
+      <div><h4>Contacto</h4><p>Av. Libertad 1234, Of. 801<br>Viña del Mar</p><p>+56 32 200 0000<br>contacto@ejemplo.cl</p></div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> Montenegro &amp; Asociadas.</span>
+      <span><a href="#privacidad">Política de privacidad</a></span>
+    </div>
+  </footer>
+
+  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Aviso de cookies">
+    <div class="cookie-inner">
+      <p>Usamos cookies técnicas para el funcionamiento del sitio. Puedes aceptar o rechazar.</p>
+      <div class="cookie-actions">
+        <button class="btn btn-outline" data-cookie="reject" style="color:#fff;border-color:rgba(255,255,255,.5);">Rechazar</button>
+        <button class="btn btn-primary" data-cookie="accept">Aceptar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/app.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
