@@ -328,3 +328,22 @@ textarea { min-height: 130px; resize: vertical; }
 /* ---------- Evitar desbordes en móvil ---------- */
 html, body { max-width: 100%; }
 img, svg, video, canvas { height: auto; }
+
+/* Forzar legibilidad en footer */
+.site-footer h4 {
+  color: #ffffff !important;
+}
+
+.site-footer p,
+.site-footer a {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.site-footer a:hover {
+  color: #C5A880 !important;
+}
+
+/* Forzar legibilidad en header subtítulo */
+.brand small {
+  color: #475569 !important;
+}
