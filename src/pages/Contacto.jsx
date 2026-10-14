@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import ContactForm from '../components/ContactForm'
 
 export default function Contacto() {
@@ -34,7 +35,7 @@ export default function Contacto() {
                   </div>
                 </div>
                 <div className="item">
-                  <div className="icon" aria-hidden="true">⌂</div>
+                  <div className="icon" aria-hidden="true"></div>
                   <div>
                     <strong>Oficina</strong>
                     <span>Av. Libertad 1234, Oficina 801<br />Viña del Mar</span>
