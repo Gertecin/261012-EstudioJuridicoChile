@@ -26,7 +26,11 @@ export default function Footer() {
         </div>
         <div style={{ borderTop: '1px solid rgba(255,255,255,0.12)', marginTop: '2rem', paddingTop: '1.2rem', display: 'flex', flexWrap: 'wrap', gap: '.8rem', justifyContent: 'space-between', fontSize: '.85rem', color: 'rgba(255,255,255,0.65)' }}>
           <span>© {year} Montenegro {'&'} Asociadas. Todos los derechos reservados.</span>
-          <span><Link to="/terminos-legales" style={{ color: 'rgba(255,255,255,0.65)', textDecoration: 'none' }}>Términos legales</Link> · <Link to="/contacto" style={{ color: 'rgba(255,255,255,0.65)', textDecoration: 'none' }}>Política de privacidad</Link></span>
+          <span>
+            <Link to="/terminos-legales" style={{ color: 'rgba(255,255,255,0.65)', textDecoration: 'none' }}>Términos legales</Link>
+            {' · '}
+            <Link to="/privacidad" style={{ color: 'rgba(255,255,255,0.65)', textDecoration: 'none' }}>Política de privacidad</Link>
+          </span>
         </div>
       </div>
     </footer>
