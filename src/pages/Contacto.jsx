@@ -3,38 +3,61 @@ import ContactForm from '../components/ContactForm'
 export default function Contacto() {
   return (
     <>
-      <section className="py-16">
-        <div className="max-w-site mx-auto px-5">
-          <span className="inline-block uppercase tracking-widest text-xs font-semibold text-dorado mb-2">Contacto</span>
-          <h1 className="text-4xl md:text-5xl font-serif mb-4">Cuéntanos tu situación y te respondemos pronto.</h1>
-          <p className="text-pizarra text-lg max-w-2xl">Completa el formulario con los datos básicos de tu consulta. Todas las comunicaciones están protegidas por el secreto profesional.</p>
+      <section className="section">
+        <div className="container">
+          <span className="eyebrow">Contacto</span>
+          <h1>Cuéntanos tu situación y te respondemos pronto.</h1>
+          <p className="lead">Completa el formulario con los datos básicos de tu consulta. Todas las comunicaciones están protegidas por el secreto profesional.</p>
         </div>
       </section>
 
-      <section className="py-16 bg-white">
-        <div className="max-w-site mx-auto px-5 grid md:grid-cols-2 gap-10">
-          <ContactForm />
+      <section className="section section-alt">
+        <div className="container">
+          <div className="split">
+            <ContactForm />
 
-          <div>
-            <h2 className="text-2xl font-serif mb-6">Información de contacto</h2>
-            {[
-              { i: '✉', t: 'Correo', d: 'contacto@ejemplo.cl' },
-              { i: '☎', t: 'Teléfono', d: '+56 32 200 0000' },
-              { i: '', t: 'Oficina', d: 'Av. Libertad 1234, Oficina 801\nViña del Mar' },
-              { i: '◷', t: 'Horario', d: 'Lunes a viernes, 09:00 a 18:30 hrs.\nAtención remota disponible.' }
-            ].map((c, i) => (
-              <div key={i} className="flex gap-3 mb-5">
-                <div className="w-10 h-10 rounded-full bg-petroleo text-dorado grid place-items-center flex-shrink-0">{c.i}</div>
-                <div>
-                  <strong className="block font-serif text-petroleo">{c.t}</strong>
-                  <span className="text-sm text-pizarra whitespace-pre-line">{c.d}</span>
+            <div>
+              <div className="contact-info">
+                <h2 style={{ fontSize: '1.4rem', marginBottom: '1.5rem' }}>Información de contacto</h2>
+                <div className="item">
+                  <div className="icon" aria-hidden="true">✉</div>
+                  <div>
+                    <strong>Correo</strong>
+                    <span>contacto@ejemplo.cl</span>
+                  </div>
+                </div>
+                <div className="item">
+                  <div className="icon" aria-hidden="true">☎</div>
+                  <div>
+                    <strong>Teléfono</strong>
+                    <span>+56 32 200 0000</span>
+                  </div>
+                </div>
+                <div className="item">
+                  <div className="icon" aria-hidden="true">⌂</div>
+                  <div>
+                    <strong>Oficina</strong>
+                    <span>Av. Libertad 1234, Oficina 801<br />Viña del Mar</span>
+                  </div>
+                </div>
+                <div className="item">
+                  <div className="icon" aria-hidden="true">◷</div>
+                  <div>
+                    <strong>Horario</strong>
+                    <span>Lunes a viernes, 09:00 a 18:30 hrs.<br />Atención remota disponible.</span>
+                  </div>
                 </div>
               </div>
-            ))}
 
-            <div id="privacidad" className="bg-white border border-borde rounded p-6 mt-6">
-              <h3 className="text-lg font-serif mb-2">Política de privacidad (marcador)</h3>
-              <p className="text-sm text-pizarra">[TEXTO MARCADOR — A REEMPLAZAR POR EL TEXTO DEFINITIVO REVISADO POR EL ESTUDIO.] Los datos personales proporcionados serán tratados por Montenegro & Asociadas con la finalidad de responder a su consulta y, en su caso, prestar los servicios jurídicos contratados. Sus antecedentes no serán compartidos con terceros salvo obligación legal. Puede ejercer sus derechos de acceso, rectificación, cancelación y oposición escribiendo a contacto@ejemplo.cl, conforme a la Ley N° 19.628 sobre Protección de la Vida Privada.</p>
+              <div id="privacidad" className="card" style={{ marginTop: '1.5rem' }}>
+                <h3 style={{ fontSize: '1.1rem' }}>Política de privacidad (marcador)</h3>
+                <p style={{ fontSize: '.92rem', color: 'var(--gris-pizarra)' }}>
+                  [TEXTO MARCADOR — A REEMPLAZAR POR EL TEXTO DEFINITIVO REVISADO POR EL ESTUDIO.]
+                  Los datos personales proporcionados serán tratados por Montenegro {'&'} Asociadas con la finalidad de responder a su consulta y, en su caso, prestar los servicios jurídicos contratados.
+                  Sus antecedentes no serán compartidos con terceros salvo obligación legal. Puede ejercer sus derechos de acceso, rectificación, cancelación y oposición escribiendo a contacto@ejemplo.cl,
+                  conforme a la Ley N° 19.628 sobre Protección de la Vida Privada.
+                </p>
+              </div>
             </div>
           </div>
         </div>
