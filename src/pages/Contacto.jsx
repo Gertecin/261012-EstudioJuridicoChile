@@ -48,16 +48,6 @@ export default function Contacto() {
                   </div>
                 </div>
               </div>
-
-              <div id="privacidad" className="card" style={{ marginTop: '1.5rem' }}>
-                <h3 style={{ fontSize: '1.1rem' }}>Política de privacidad (marcador)</h3>
-                <p style={{ fontSize: '.92rem', color: 'var(--gris-pizarra)' }}>
-                  [TEXTO MARCADOR — A REEMPLAZAR POR EL TEXTO DEFINITIVO REVISADO POR EL ESTUDIO.]
-                  Los datos personales proporcionados serán tratados por Montenegro {'&'} Asociadas con la finalidad de responder a su consulta y, en su caso, prestar los servicios jurídicos contratados.
-                  Sus antecedentes no serán compartidos con terceros salvo obligación legal. Puede ejercer sus derechos de acceso, rectificación, cancelación y oposición escribiendo a contacto@ejemplo.cl,
-                  conforme a la Ley N° 19.628 sobre Protección de la Vida Privada.
-                </p>
-              </div>
             </div>
           </div>
         </div>
