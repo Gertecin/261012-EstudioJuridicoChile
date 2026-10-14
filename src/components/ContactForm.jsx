@@ -33,51 +33,61 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white border border-borde rounded p-6 shadow-sm space-y-4" noValidate>
-      <div className="grid md:grid-cols-2 gap-4">
+    <form id="contact-form" onSubmit={handleSubmit} className="form-wrap" noValidate>
+      <h2 style={{ fontSize: '1.4rem', marginBottom: '1rem' }}>Enviar una consulta</h2>
+      
+      <div className="form-row two">
         <div>
-          <label className="block text-sm font-semibold text-petroleo mb-1">Nombre completo *</label>
-          <input type="text" name="nombre" value={form.nombre} onChange={handleChange} required className="w-full px-3 py-2 border border-borde rounded bg-blanco-roto focus:border-dorado focus:ring-2 focus:ring-dorado/25 outline-none" />
+          <label htmlFor="nombre">Nombre completo *</label>
+          <input type="text" id="nombre" name="nombre" value={form.nombre} onChange={handleChange} required />
         </div>
         <div>
-          <label className="block text-sm font-semibold text-petroleo mb-1">Teléfono</label>
-          <input type="tel" name="telefono" value={form.telefono} onChange={handleChange} placeholder="+56 9 0000 0000" className="w-full px-3 py-2 border border-borde rounded bg-blanco-roto focus:border-dorado focus:ring-2 focus:ring-dorado/25 outline-none" />
+          <label htmlFor="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" value={form.telefono} onChange={handleChange} placeholder="+56 9 0000 0000" />
         </div>
       </div>
 
-      <div>
-        <label className="block text-sm font-semibold text-petroleo mb-1">Correo electrónico *</label>
-        <input type="email" name="email" value={form.email} onChange={handleChange} required className="w-full px-3 py-2 border border-borde rounded bg-blanco-roto focus:border-dorado focus:ring-2 focus:ring-dorado/25 outline-none" />
+      <div className="form-row">
+        <div>
+          <label htmlFor="email">Correo electrónico *</label>
+          <input type="email" id="email" name="email" value={form.email} onChange={handleChange} required />
+        </div>
       </div>
 
-      <div>
-        <label className="block text-sm font-semibold text-petroleo mb-1">Materia de consulta</label>
-        <select name="area" value={form.area} onChange={handleChange} className="w-full px-3 py-2 border border-borde rounded bg-blanco-roto focus:border-dorado focus:ring-2 focus:ring-dorado/25 outline-none">
-          <option value="">Selecciona un área</option>
-          <option>Divorcio o separación</option>
-          <option>Cuidado personal o visitas</option>
-          <option>Pensión de alimentos</option>
-          <option>Adopción o filiación</option>
-          <option>Mediación familiar</option>
-          <option>Violencia intrafamiliar</option>
-          <option>Otra</option>
-        </select>
+      <div className="form-row">
+        <div>
+          <label htmlFor="area">Materia de consulta</label>
+          <select id="area" name="area" value={form.area} onChange={handleChange}>
+            <option value="">Selecciona un área</option>
+            <option>Divorcio o separación</option>
+            <option>Cuidado personal o visitas</option>
+            <option>Pensión de alimentos</option>
+            <option>Adopción o filiación</option>
+            <option>Mediación familiar</option>
+            <option>Violencia intrafamiliar</option>
+            <option>Otra</option>
+          </select>
+        </div>
       </div>
 
-      <div>
-        <label className="block text-sm font-semibold text-petroleo mb-1">Cuéntanos brevemente tu consulta *</label>
-        <textarea name="mensaje" value={form.mensaje} onChange={handleChange} required rows={5} placeholder="Ej.: Estoy evaluando un divorcio de mutuo acuerdo y tenemos dos hijos menores..." className="w-full px-3 py-2 border border-borde rounded bg-blanco-roto focus:border-dorado focus:ring-2 focus:ring-dorado/25 outline-none resize-y" />
+      <div className="form-row">
+        <div>
+          <label htmlFor="mensaje">Cuéntanos brevemente tu consulta *</label>
+          <textarea id="mensaje" name="mensaje" value={form.mensaje} onChange={handleChange} required rows={5} placeholder="Ej.: Estoy evaluando un divorcio de mutuo acuerdo y tenemos dos hijos menores..." />
+        </div>
       </div>
 
-      <label className="flex gap-2 items-start text-sm text-pizarra">
-        <input type="checkbox" name="privacidad" checked={form.privacidad} onChange={handleChange} required className="mt-1" />
-        <span>He leído y acepto la <a href="#privacidad" className="text-petroleo underline">política de privacidad</a> y el tratamiento confidencial de mis antecedentes. *</span>
-      </label>
+      <div className="form-row">
+        <label className="checkbox">
+          <input type="checkbox" id="privacidad" name="privacidad" checked={form.privacidad} onChange={handleChange} required />
+          <span>He leído y acepto la <a href="#privacidad">política de privacidad</a> y el tratamiento confidencial de mis antecedentes. *</span>
+        </label>
+      </div>
 
-      <button type="submit" className="w-full bg-dorado text-petroleo font-semibold py-3 rounded hover:bg-dorado-hover hover:text-white transition">Enviar consulta</button>
+      <button type="submit" className="btn btn-primary" style={{ width: '100%' }}>Enviar consulta</button>
 
       {feedback.texto && (
-        <div role="status" aria-live="polite" className={`p-3 rounded text-sm ${feedback.tipo === 'ok' ? 'bg-dorado/15 text-petroleo border border-dorado' : 'bg-red-100 text-red-800 border border-red-300'}`}>
+        <div id="form-feedback" className={`form-feedback ${feedback.tipo}`} role="status" aria-live="polite">
           {feedback.texto}
         </div>
       )}
