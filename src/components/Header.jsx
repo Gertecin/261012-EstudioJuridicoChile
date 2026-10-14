@@ -19,7 +19,7 @@ export default function Header() {
         <Link to="/" className="flex items-center gap-2 font-serif text-petroleo text-lg font-semibold">
           <span className="w-9 h-9 rounded-full bg-petroleo text-dorado grid place-items-center font-bold">M</span>
           <span>
-            Montenegro & Asociadas
+            Montenegro {'&'} Asociadas
             <small className="block font-sans text-xs tracking-widest uppercase text-pizarra">Abogadas de Familia</small>
           </span>
         </Link>
