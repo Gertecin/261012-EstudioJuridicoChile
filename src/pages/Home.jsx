@@ -17,9 +17,9 @@ export default function Home() {
 
       <section className="py-16">
         <div className="max-w-site mx-auto px-5">
-          <span className="inline-block uppercase tracking-widest text-xs font-semibold text-dorado mb-2">Por qué elegirnos</span>
+          <span className="eyebrow">Por qué elegirnos</span>
           <h2 className="text-3xl md:text-4xl font-serif mb-3">Una mirada profesional, cercana y serena.</h2>
-          <p className="text-pizarra max-w-2xl mb-8">Entendemos que consultar por temas de familia suele ser difícil. Por eso trabajamos con transparencia en los plazos, los costos y las alternativas reales que tienes a tu disposición.</p>
+          <p className="lead mb-8">Entendemos que consultar por temas de familia suele ser difícil. Por eso trabajamos con transparencia en los plazos, los costos y las alternativas reales que tienes a tu disposición.</p>
           <div className="grid md:grid-cols-3 gap-6">
             {[
               { icon: '⚖', t: 'Experiencia local', d: 'Litigamos y meditamos habitualmente ante los Tribunales de Familia de Viña del Mar, Valparaíso y Quilpué.' },
@@ -38,7 +38,7 @@ export default function Home() {
 
       <section className="py-16 bg-white">
         <div className="max-w-site mx-auto px-5">
-          <span className="inline-block uppercase tracking-widest text-xs font-semibold text-dorado mb-2">Áreas destacadas</span>
+          <span className="eyebrow">Áreas destacadas</span>
           <h2 className="text-3xl md:text-4xl font-serif mb-6">Te acompañamos en los procesos más frecuentes.</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {[
@@ -61,9 +61,9 @@ export default function Home() {
       <section className="py-16">
         <div className="max-w-site mx-auto px-5 grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <span className="inline-block uppercase tracking-widest text-xs font-semibold text-dorado mb-2">Sobre el estudio</span>
+            <span className="eyebrow">Sobre el estudio</span>
             <h2 className="text-3xl md:text-4xl font-serif mb-3">Más de una década defendiendo el bienestar de las familias.</h2>
-            <p className="text-pizarra mb-6">Nacimos en Viña del Mar con la convicción de que el derecho de familia debe ejercerse con escucha activa, rigor técnico y respeto por los tiempos de cada persona.</p>
+            <p className="lead mb-6">Nacimos en Viña del Mar con la convicción de que el derecho de familia debe ejercerse con escucha activa, rigor técnico y respeto por los tiempos de cada persona.</p>
             <Link to="/sobre-nosotras" className="inline-block border border-petroleo text-petroleo font-semibold px-6 py-3 rounded hover:bg-petroleo hover:text-white transition">Conoce al equipo</Link>
           </div>
           <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=900&q=70" alt="Abogadas del estudio en reunión de trabajo" className="rounded shadow-md aspect-[4/5] object-cover w-full" />
