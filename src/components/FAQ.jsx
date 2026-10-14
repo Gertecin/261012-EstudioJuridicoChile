@@ -19,23 +19,23 @@ export default function FAQ() {
   }
 
   return (
-    <div className="max-w-3xl mx-auto space-y-3">
+    <div className="faq-list">
       {preguntas.map((p, i) => {
         const abierto = !!abiertos[i]
         return (
-          <div key={i} className="border border-borde rounded bg-white overflow-hidden">
+          <div key={i} className="faq-item" data-open={abierto ? 'true' : 'false'}>
             <button
               type="button"
+              className="faq-trigger"
               onClick={() => toggle(i)}
               aria-expanded={abierto}
-              aria-controls={`faq-${i}`}
-              className="w-full text-left px-5 py-4 flex justify-between items-center gap-4 font-serif text-petroleo font-semibold text-base bg-transparent border-0 cursor-pointer"
+              aria-controls={`faq-panel-${i}`}
             >
               {p.q}
-              <span className={`w-6 h-6 rounded-full bg-dorado/20 text-dorado-hover grid place-items-center text-xs transition-transform ${abierto ? 'rotate-180' : ''}`}>▾</span>
+              <span className="chev" aria-hidden="true">▾</span>
             </button>
-            <div id={`faq-${i}`} className="faq-panel" style={{ maxHeight: abierto ? '500px' : '0' }}>
-              <div className="px-5 pb-4 text-pizarra">{p.a}</div>
+            <div className="faq-panel" id={`faq-panel-${i}`} role="region" style={{ maxHeight: abierto ? '500px' : '0' }}>
+              <div>{p.a}</div>
             </div>
           </div>
         )
