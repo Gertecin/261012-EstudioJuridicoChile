@@ -12,31 +12,33 @@ const areas = [
 export default function Areas() {
   return (
     <>
-      <section className="py-16">
-        <div className="max-w-site mx-auto px-5">
-          <span className="inline-block uppercase tracking-widest text-xs font-semibold text-dorado mb-2">Áreas de práctica</span>
-          <h1 className="text-4xl md:text-5xl font-serif mb-4">Te acompañamos en cada etapa de tu proceso familiar.</h1>
-          <p className="text-pizarra text-lg max-w-2xl">Trabajamos las materias más consultadas ante los Tribunales de Familia y en procesos de mediación previa. Si no ves tu caso aquí, escríbenos igual: lo conversamos sin compromiso.</p>
+      <section className="section">
+        <div className="container">
+          <span className="eyebrow">Áreas de práctica</span>
+          <h1>Te acompañamos en cada etapa de tu proceso familiar.</h1>
+          <p className="lead">Trabajamos las materias más consultadas ante los Tribunales de Familia y en procesos de mediación previa. Si no ves tu caso aquí, escríbenos igual: lo conversamos sin compromiso.</p>
         </div>
       </section>
 
-      <section className="py-16 bg-white">
-        <div className="max-w-site mx-auto px-5 grid md:grid-cols-2 gap-6">
-          {areas.map((a, i) => (
-            <article key={i} className="bg-white border border-borde rounded overflow-hidden hover:-translate-y-1 hover:shadow-lg transition">
-              <img src={a.img} alt={a.t} className="aspect-[16/10] object-cover w-full" />
-              <div className="p-6">
-                <h3 className="text-xl font-serif mb-2">{a.t}</h3>
-                <p className="text-pizarra text-sm mb-3">{a.d}</p>
-                <ul className="list-disc pl-5 text-sm text-pizarra space-y-1">
-                  {a.l.map((it, j) => <li key={j}>{it}</li>)}
-                </ul>
-              </div>
-            </article>
-          ))}
-        </div>
-        <div className="text-center mt-10">
-          <Link to="/contacto" className="inline-block bg-dorado text-petroleo font-semibold px-6 py-3 rounded hover:bg-dorado-hover hover:text-white transition">Consulta por tu caso</Link>
+      <section className="section section-alt">
+        <div className="container">
+          <div className="grid grid-2">
+            {areas.map((a, i) => (
+              <article key={i} className="card area-card">
+                <img src={a.img} alt={a.t} />
+                <div className="body">
+                  <h3>{a.t}</h3>
+                  <p>{a.d}</p>
+                  <ul>
+                    {a.l.map((it, j) => <li key={j}>{it}</li>)}
+                  </ul>
+                </div>
+              </article>
+            ))}
+          </div>
+          <div style={{ textAlign: 'center', marginTop: '2.5rem' }}>
+            <Link to="/contacto" className="btn btn-primary">Consulta por tu caso</Link>
+          </div>
         </div>
       </section>
     </>
